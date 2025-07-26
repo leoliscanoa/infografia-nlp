@@ -1,7 +1,6 @@
 'use client';
 
 import type { FC } from 'react';
-import Image from 'next/image';
 
 type NlpConceptImageProps = {
   conceptDescription: string;
@@ -15,11 +14,10 @@ export const NlpConceptImage: FC<NlpConceptImageProps> = ({ conceptDescription, 
         Prompt for this image: 
         Generate an image that visually represents the following NLP concept: ${conceptDescription}
       */}
-      <Image
+      <img
         src={imageSrc}
         alt={`Image for: ${conceptDescription.substring(0, 50)}...`}
-        fill
-        className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
       />
     </div>
   );
