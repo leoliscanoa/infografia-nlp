@@ -9,15 +9,12 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-    ],
+      unoptimized: true,
   },
+    output: 'export',
+    basePath: process.env.NODE_ENV === 'production' ? '/infografia-nlp' : '',
+
+
 };
 
 export default nextConfig;
