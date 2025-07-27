@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import {getImagePath} from "@/lib/utils";
 
 type NlpConceptImageProps = {
   conceptDescription: string;
@@ -13,7 +14,7 @@ export const NlpConceptImage: FC<NlpConceptImageProps> = ({ conceptDescription, 
         Generate an image that visually represents the following NLP concept: ${conceptDescription}
       */}
       <img
-        src={imageSrc}
+        src={getImagePath(imageSrc)}
         alt={`Image for: ${conceptDescription.substring(0, 50)}...`}
         className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
       />
