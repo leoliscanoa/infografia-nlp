@@ -3,7 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # o master, según la rama principal que uses
+      - master
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -15,7 +17,7 @@ jobs:
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # Usa la versión de Node que prefieras
+          node-version: 18
           cache: 'npm'
 
       - name: Install dependencies 📦
@@ -27,5 +29,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out  # El directorio de salida generado por Next.js
-          branch: gh-pages  # La rama donde se desplegará el sitio
+          folder: out
+          branch: gh-pages
