@@ -6,6 +6,8 @@ export const Footer: FC = () => {
       <div className="container mx-auto px-6 py-8 text-center text-muted-foreground">
         <p>&copy; 2025 Infografía de NLP. Creado para fines educativos.</p>
         <p className="text-sm mt-2">Andrés Leonardo Liscano</p>
+        <p className="text-sm mt-2">Efraín Montealegre</p>
+        <p className="text-sm mt-2">Hermes Bechara</p>
       </div>
     </footer>
   );
